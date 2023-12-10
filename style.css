@@ -28,12 +28,12 @@ header a {
   font-size: 2rem;
 }
 body {
-    height: 100vh;
-    background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    }
-main {  
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+}
+main {
   flex-grow: 1;
 }
 .title {
@@ -81,6 +81,10 @@ main {
   justify-content: center;
   text-decoration: none;
 }
-footer {
+.footer__text {
+  grid-column: 1/-1;
+  place-self: center;
   margin-bottom: 24px;
+  color: var(--secundary-color);
+  font-size: 1rem;
 }
