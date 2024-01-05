@@ -59,7 +59,9 @@ main {
 .description {
   grid-column: 1/7;
   color: var(--secundary-color);
-  place-self: center start;
+  place-self: start;
+  z-index: -1;
+  text-align: center;
 }
 .description__title {
   font-size: 4rem;
@@ -69,7 +71,7 @@ main {
   width: 500px;
 }
 .action {
-  place-self: center end;
+  place-self: start end;
   height: 100px;
   width: 411px;
   background-color: var(--secundary-color);
@@ -80,6 +82,7 @@ main {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  z-index: -1;
 }
 .footer__text {
   grid-column: 1/-1;
@@ -87,4 +90,39 @@ main {
   margin-bottom: 24px;
   color: var(--secundary-color);
   font-size: 1rem;
+}
+.pikachu-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+@media(max-width: 960px){
+    
+    .container{
+        grid-template-columns: 1, 1fr;
+    }
+    .title {
+      place-self: center;
+      transform: translateY(20%);      
+    }
+    footer{
+        display: none;
+    }
+    .description {
+        grid-column: 1;
+        grid-row: 2;
+        place-self: center;
+        text-align: center;
+        }
+        .action {
+            grid-column: 1;
+            grid-row: 2;
+            place-self: end center; 
+            margin-bottom: 24px;
+            }
+    
+
+
 }
